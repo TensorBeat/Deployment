@@ -1,0 +1,47 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  namespace: tensorbeat
+  name: tensorbeat-grpc-web-service
+spec:
+  hosts:
+  - "grpc-web.test.tensorbeat.com"
+  gateways:
+  - tensorbeat/tensorbeat-gateway
+  http:
+  - match:
+    - uri:
+        prefix: /tensorbeat.datalake.DatalakeService
+    route:
+    - destination:
+        host: test-datalake
+        port: 
+          number: 9091
+    corsPolicy:
+      allowOrigin:
+        - "*"
+      allowMethods:
+        - POST
+        - GET
+        - OPTIONS
+        - PUT
+        - DELETE
+      allowHeaders:
+        - grpc-timeout
+        - content-type
+        - keep-alive
+        - user-agent
+        - cache-control
+        - content-type
+        - content-transfer-encoding
+        - custom-header-1
+        - x-accept-content-transfer-encoding
+        - x-accept-response-streaming
+        - x-user-agent
+        - x-grpc-web
+      maxAge: 1728s
+      exposeHeaders:
+        - custom-header-1
+        - grpc-status
+        - grpc-message
+      allowCredentials: true
