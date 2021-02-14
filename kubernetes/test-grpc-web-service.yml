@@ -2,7 +2,7 @@ apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
   namespace: tensorbeat
-  name: tensorbeat-grpc-web-service
+  name: test-tensorbeat-grpc-web-service
 spec:
   hosts:
   - "grpc-web.test.tensorbeat.com"
