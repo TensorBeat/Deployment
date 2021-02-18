@@ -1,3 +1,11 @@
+# Helpful Links
+# https://stackoverflow.com/questions/44760416/istio-ingress-with-grpc-and-http
+
+
+# TODO: Setup custom ingress gateway to permentently support opening grpc port 
+# - https://stackoverflow.com/questions/51835752/how-to-create-custom-istio-ingress-gateway-controller
+# - https://istio.io/latest/blog/2019/custom-ingress-gateway/
+
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
@@ -11,5 +19,11 @@ spec:
       number: 80
       name: http
       protocol: HTTP
+    hosts:
+    - "*"
+  - port:
+      number: 50051
+      name: grpc
+      protocol: GRPC
     hosts:
     - "*"

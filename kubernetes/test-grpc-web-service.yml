@@ -16,7 +16,7 @@ spec:
     - destination:
         host: test-datalake
         port: 
-          number: 9091
+          number: 50052
     corsPolicy:
       allowOrigin:
         - "*"
