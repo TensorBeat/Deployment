@@ -9,9 +9,7 @@ spec:
   gateways:
   - tensorbeat-gateway
   http:
-  - match:
-    - port: 80
-    route:
+  - route:
     - destination:
         host: kubeapps.kubeapps.svc.cluster.local
         port: 
