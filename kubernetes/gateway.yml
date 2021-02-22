@@ -16,7 +16,7 @@ spec:
     istio: ingressgateway # use Istio default gateway implementation
   servers:
   - port:
-      number: 80
+      number: 6379
       name: redis-port
       protocol: TCP
     hosts:

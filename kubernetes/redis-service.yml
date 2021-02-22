@@ -9,17 +9,8 @@ spec:
   gateways:
   - default/tensorbeat-gateway
   tcp:
-    - match:
-      - port: 6379
-      route:
+    - route:
       - destination:
           host: redis-master.redis.svc.cluster.local
-          port:
-            number: 6379
-    - match:
-      - port: 6380
-      route:
-      - destination:
-          host: redis-slave.redis.svc.cluster.local
           port:
             number: 6379
