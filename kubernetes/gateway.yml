@@ -23,13 +23,13 @@ spec:
     - "*"
   - port:
       number: 443
-      name: https
+      name: https-kubeapps
       protocol: HTTPS
     tls:
       mode: SIMPLE
       credentialName: ingress-cert 
     hosts:
-    - "*"
+    - "kubeapps.tensorbeat.com"
   - port:
       number: 50051
       name: grpc

@@ -11,7 +11,10 @@ Installs for things that aren't explicit in kubernetes folder
 Installed via GKE toggle
 
 ## Helm installs (eventually automate these)
-
+kiali
+```sh
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.9/samples/addons/kiali.yaml
+```
 cert-manager
 
 ```sh

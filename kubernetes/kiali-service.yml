@@ -1,16 +1,16 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  namespace: kubeapps
-  name: kubeapps-service
+  namespace: istio-system
+  name: kiali-service
 spec:
   hosts:
-  - "kubeapps.tensorbeat.com"
+  - "kiali.tensorbeat.com"
   gateways:
   - default/tensorbeat-gateway
   http:
   - route:
     - destination:
-        host: kubeapps.kubeapps.svc.cluster.local
+        host: kiali
         port: 
-          number: 80
+          number: 20001
