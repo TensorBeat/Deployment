@@ -8,13 +8,14 @@ Installs for things that aren't explicit in kubernetes folder
 
 ## Istio
 
-Installed via GKE toggle
+Installed via GKE toggle  
+Sidecar Toggle
+```sh
+kubectl label namespace default istio-injection=enabled --overwrite
+```
 
 ## Helm installs (eventually automate these)
-kiali
-```sh
-kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.9/samples/addons/kiali.yaml
-```
+
 cert-manager
 
 ```sh
