@@ -1,0 +1,18 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  namespace: kubeapps
+  name: kubeapps-service
+spec:
+  hosts:
+  - "kubeapps.tensorbeat.com"
+  gateways:
+  - tensorbeat-gateway
+  http:
+  - match:
+    - port: 80
+    route:
+    - destination:
+        host: kubeapps.kubeapps.svc.cluster.local
+        port: 
+          number: 80
