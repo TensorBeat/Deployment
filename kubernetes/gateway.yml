@@ -17,6 +17,12 @@ spec:
   servers:
   - port:
       number: 80
+      name: redis-port
+      protocol: TCP
+    hosts:
+    - redis.tensorbeat.com
+  - port:
+      number: 80
       name: http
       protocol: HTTP
     hosts:
