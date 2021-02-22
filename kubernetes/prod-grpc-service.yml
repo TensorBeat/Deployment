@@ -17,4 +17,4 @@ spec:
     - destination:
         host: datalake
         port: 
-          number: 9090
+          number: 50051
