@@ -9,7 +9,6 @@
 apiVersion: networking.istio.io/v1alpha3
 kind: Gateway
 metadata:
-  namespace: tensorbeat
   name: tensorbeat-gateway
 spec:
   selector:

@@ -7,7 +7,7 @@ spec:
   hosts:
   - "grpc-web.test.tensorbeat.com"
   gateways:
-  - tensorbeat/tensorbeat-gateway
+  - tensorbeat-gateway
   http:
   - match:
     - uri:
