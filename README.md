@@ -10,11 +10,21 @@ Installs for things that aren't explicit in kubernetes folder
 
 Installed via GKE toggle  
 Sidecar Toggle
+
 ```sh
 kubectl label namespace default istio-injection=enabled --overwrite
 ```
 
 ## Helm installs (eventually automate these)
+
+Dask
+
+```sh
+kubectl create namespace dask-gateway
+helm repo add daskgateway https://dask.org/dask-gateway-helm-repo/
+helm repo update
+helm upgrade --install --namespace dask-gateway --version 0.9.0 --values ./kubernetes/dask/helm-values.yml dask-gateway daskgateway/dask-gateway
+```
 
 cert-manager
 
