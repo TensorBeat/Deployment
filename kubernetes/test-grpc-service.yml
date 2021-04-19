@@ -13,6 +13,9 @@ spec:
     - uri:
         prefix: /tensorbeat.datalake.DatalakeService
       port: 50051
+    - uri:
+        prefix: /grpc.reflection
+      port: 50051
     route:
     - destination:
         host: test-datalake
