@@ -6,6 +6,10 @@ Top level TensorBeat deployment on kubernetes
 
 Installs for things that aren't explicit in kubernetes folder
 
+## GPU Drivers
+```sh
+kubectl apply -f https://raw.githubusercontent.com/GoogleCloudPlatform/container-engine-accelerators/master/nvidia-driver-installer/cos/daemonset-preloaded.yaml
+```
 ## Istio
 
 Installed via GKE toggle  
