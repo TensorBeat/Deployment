@@ -5,7 +5,7 @@ metadata:
   name: tensorbeat-grpc-midi-web-service
 spec:
   hosts:
-  - "grpc-midi-web.tensorbeat.com"
+  - "grpc-web.tensorbeat.com"
   gateways:
   - default/tensorbeat-gateway
   http:
