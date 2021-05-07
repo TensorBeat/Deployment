@@ -19,5 +19,14 @@ spec:
     route:
     - destination:
         host: datalake
-        port: 
+        port:
           number: 50051
+  - match:
+    - uri:
+        prefix: /tensorbeat.sarosh_gen.SaroshGenerator
+      port: 50051
+    route:
+      - destination:
+          host: midi-generator
+          port:
+            number: 50051
